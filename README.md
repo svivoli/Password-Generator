@@ -25,7 +25,7 @@ Components:
 ### Links to Project
 
 https://github.com/svivoli/homework3
-https://svivoli.github.io/homework3/
+https://svivoli.github.io/homework3/index.html
 
 ### My Experience
 
