@@ -77,7 +77,11 @@
 
 function generate() {
 
-    var numChars = prompt("How many chars do you want? Max 126.");
+    var numChars = prompt("How many characterss do you want? Max 126.");
+    if (numChars > 126) {
+        alert("Please choose a number between 1 and 126.");
+        prompt("How many characters do you want? Max 126.")
+    }
     var lowerWanted = confirm("Do you want lowercase characters?");
     var upperWanted = confirm("Do you want uppercase characters?");
     var numWanted = confirm("Do you want numbers?");

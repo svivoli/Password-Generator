@@ -12,7 +12,7 @@ Components:
   - Numbers (yes/no)
   - Special characters (yes/no)
 2. Bootstrap jumbotron 
-3. Bootstrap responsive buttons
+3. Responsive Bootstrap buttons
   - Generate password
   - Copy to clipboard
 4. H1 titles
