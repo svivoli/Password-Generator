@@ -1,6 +1,11 @@
+body {
+    background-image: url(circuit5.jpg);
+}
+
 h1 {
-    text-align: center;
     padding: 10px;
+    text-align: center;
+    color: #ffffff;
 }
 
 .jumbotron {
@@ -33,7 +38,7 @@ h2 {
 }
 
 #generate, #copy {
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 @media screen and (max-width: 375px) {
