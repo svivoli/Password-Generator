@@ -52,20 +52,6 @@ function generate() {
         passwordDisplay.innerHTML = password;
     }
 
-    console.log(randomLowerIndex + " = random lower index");
-    console.log(randomLower + " = random lower");
-    console.log(randomUpperIndex + " = random upper index");
-    console.log(randomUpper + " = random upper");
-    console.log(randomNumIndex + " = random num index");
-    console.log(randomNum + " = random num");
-    console.log(randomSymbIndex + " = random symb index");
-    console.log(randomSymb + " = random symb");
-    console.log(numChars + " = password length");
-    console.log(symbWanted + " = special chars");
-    console.log(lowerWanted + " = lower chars")
-    console.log(upperWanted + " = upper chars")
-    console.log(numWanted + " = numbers")
-
 }
 
 

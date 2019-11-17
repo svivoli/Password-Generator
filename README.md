@@ -20,7 +20,7 @@ Components:
 6. Borders
 7. Super cool background image
 
-(See Password-Generator-screenshot.png for a preview of the site).
+(See assets/images/password-generator-screenshot.png for a preview of the site).
 
 ### Links to Project
 
