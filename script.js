@@ -1,62 +1,50 @@
-function generate() {
+const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const lowercase = 'abcdefghijklmnopqrstuvwxyz';
+const numbers = '0123456789';
+const symbols = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
 
-    var numChars = prompt("How many characterss do you want? Max 128.");
-    if (numChars < 8 || numChars > 128) {
+function generate() {
+    const length = prompt("How many characterss do you want? Max 128.");
+    if (length < 8 || length > 128) {
         alert("Please select a number between 8 and 128.");
         return;
+    };
+    const upperOption = confirm("Do you want uppercase characters?");
+    const lowerOption = confirm("Do you want lowercase characters?");
+    const numOption = confirm("Do you want numbers?");
+    const symOption = confirm("Do you want special characters?");
+
+    let character_string = '';
+    let password = '';
+    const passwordDisplay = document.getElementById("password");
+
+    if (upperOption == true) {
+        character_string += uppercase;
     }
-    var lowerWanted = confirm("Do you want lowercase characters?");
-    var upperWanted = confirm("Do you want uppercase characters?");
-    var numWanted = confirm("Do you want numbers?");
-    var symbWanted = confirm("Do you want special characters?");
+    if (lowerOption == true) {
+        character_string += lowercase;
+    }
+    if (numOption == true) {
+        character_string += numbers;
+    }
+    if (symOption == true) {
+        character_string += symbols;
+    }
 
-    var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    var lowercase = 'abcdefghijklmnopqrstuvwxyz';
-    var numbers = '0123456789';
-    var symbols = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
+    for (let i=0; i<length; i++) {
+        password += character_string.charAt(Math.floor(Math.random() * character_string.length));
+    }
 
-    var all = uppercase + lowercase + numbers + symbols;
-
-    var randomLowerIndex = Math.floor(Math.random() * lowercase.length);
-    var randomLower = lowercase[randomLowerIndex];
-    var randomUpperIndex = Math.floor(Math.random() * uppercase.length);
-    var randomUpper = uppercase[randomUpperIndex];
-    var randomNumIndex = Math.floor(Math.random() * numbers.length);
-    var randomNum = numbers[randomNumIndex];
-    var randomSymbIndex = Math.floor(Math.random() * symbols.length);
-    var randomSymb = symbols[randomSymbIndex];
-
-    var password = '';
-    var passwordDisplay = document.getElementById("password");
-
-    
-    for (var index = 0; index < numChars; index++) {
-        var character = Math.floor(Math.random() * all.length);
-        password += all.substring(character, character + 1);
-        if (lowerWanted === true) {
-            character += randomLower;
-        }
-        if (upperWanted === true) {
-            character += randomUpper;
-        }
-        if (numWanted === true) {
-            character += randomNum;
-        }
-        if (symbWanted === true) {
-            character += randomSymb;
-        } 
-        if (lowerWanted === false && upperWanted === false && numWanted === false && symbWanted === false) {
-            alert("Please choose at least one type of character for your password.");
-            generate();
-        }
+    if (lowerOption == false && upperOption== false && numOption== false && symOption == false) {
+        alert("Please choose at least one type of character for your password.");
+        generate();
+    } else {
         passwordDisplay.innerHTML = password;
     }
-
 }
 
-
 function copyToClipboard(element) {
-    var $temp = $("<input>");
+    const $temp = $("<input>");
     $("body").append($temp);
     $temp.val($(element).text()).select();
     document.execCommand("copy");
