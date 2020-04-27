@@ -1,5 +1,10 @@
 # Password Generator
 
+### Links to Project
+
+[Live Site](https://github.com/svivoli/homework3)  
+[GitHub Repository](https://svivoli.github.io/homework3/index.html)
+
 ### Description
 
 The purpose of this project was to create a webpage that generates a random, secure password based on criteria inputted by the user. This is a useful tool for companies that deploy websites that host sensitive data so that their users can log in securely and ensure that their information is protected.
@@ -21,11 +26,6 @@ Components:
 7. Super cool background image
 
 (See assets/images/password-generator-screenshot.png for a preview of the site).
-
-### Links to Project
-
-https://github.com/svivoli/homework3
-https://svivoli.github.io/homework3/index.html
 
 ### My Experience
 
