@@ -2,8 +2,8 @@
 
 ### Links to Project
 
-[Live Site](https://github.com/svivoli/homework3)  
-[GitHub Repository](https://svivoli.github.io/homework3/index.html)
+[Live Site](https://svivoli.github.io/Password-Generator/)  
+[GitHub Repository](https://github.com/svivoli/Password-Generator)
 
 ### Description
 
